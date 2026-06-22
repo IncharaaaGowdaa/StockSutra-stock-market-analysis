@@ -4,6 +4,7 @@ from app.routers.stock import router as stock_router
 from app.routers.history import router as history_router
 from app.routers.analysis import router as analysis_router
 from app.routers.news import router as news_router
+from app.routers.ai import router as ai_router
 
 app = FastAPI(
     title="StockSutra API",
@@ -14,7 +15,7 @@ app.include_router(stock_router)
 app.include_router(history_router)
 app.include_router(analysis_router)
 app.include_router(news_router)
-
+app.include_router(ai_router)
 @app.get("/")
 def root():
     return {
