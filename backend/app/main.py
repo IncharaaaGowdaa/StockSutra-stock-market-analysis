@@ -1,0 +1,24 @@
+from fastapi import FastAPI
+
+from app.routers.stock import router as stock_router
+
+app = FastAPI(
+    title="StockSutra API",
+    version="1.0.0"
+)
+
+app.include_router(stock_router)
+
+
+@app.get("/")
+def root():
+    return {
+        "message": "Welcome to StockSutra API"
+    }
+
+
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy"
+    }
