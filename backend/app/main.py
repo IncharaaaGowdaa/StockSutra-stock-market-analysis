@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from app.routers.stock import router as stock_router
+from app.routers.history import router as history_router
 
 app = FastAPI(
     title="StockSutra API",
@@ -8,6 +9,7 @@ app = FastAPI(
 )
 
 app.include_router(stock_router)
+app.include_router(history_router)
 
 
 @app.get("/")
