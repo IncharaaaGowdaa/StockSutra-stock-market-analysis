@@ -1,4 +1,20 @@
 function AIInsightCard({ ai }) {
+
+  if (ai.ai_available === false) {
+    return (
+      <div className="bg-slate-900 border border-yellow-500 rounded-2xl p-6">
+        <h2 className="text-xl font-semibold mb-4">
+          AI Analysis
+        </h2>
+
+        <p className="text-yellow-400">
+          AI analysis is temporarily unavailable because the Gemini API quota has been exceeded.
+          Please try again in a few minutes.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
       <h2 className="text-xl font-semibold mb-4">

@@ -17,6 +17,9 @@ export const getAnalysis = (ticker) =>
 export const getNews = (ticker) =>
   api.get(`/news/${ticker}`);
 
+export const getTechnicalAnalysis = (ticker) =>
+  api.get(`/analyze/${ticker}`);
+
 export const getAIAnalysis = (ticker) =>
   api.get(`/ai/${ticker}`);
 
