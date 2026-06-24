@@ -1,4 +1,4 @@
-# 📈 StockSutra - AI-Powered Stock Market Analysis Platform
+# 📈 StockSutra: AI-Powered Stock Market Analysis Platform
 
 StockSutra is a full-stack financial intelligence platform designed to analyze publicly traded companies using real-time market data, technical indicators, sentiment analysis, and AI-generated investment insights.
 
