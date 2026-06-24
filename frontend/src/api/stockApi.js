@@ -26,7 +26,9 @@ export const getAIAnalysis = (ticker) =>
 export const getScore = (ticker) =>
   api.get(`/score/${ticker}`);
 
-export const compareStocks = (tickers) =>
-  api.get(`/compare?tickers=${tickers}`);
+export const compareStocks = (ticker1, ticker2) =>
+  api.get(
+    `/compare/?ticker1=${ticker1}&ticker2=${ticker2}`
+  );
 
 export default api;
