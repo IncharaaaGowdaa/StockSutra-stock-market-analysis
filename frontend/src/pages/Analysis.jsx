@@ -5,6 +5,8 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage";
 import AIInsightCard from "../components/AIInsightCard";
 import TechnicalAnalysisCard from "../components/TechnicalAnalysisCard";
+import SentimentCard from "../components/SentimentCard";
+import NewsList from "../components/NewsList";
 
 import {
   getAIAnalysis,
@@ -76,8 +78,13 @@ function Analysis() {
 
       {technicals && (
         <TechnicalAnalysisCard
-          data={technicals}
-        />
+          data={technicals}/>
+      )}
+      {news && (
+        <SentimentCard data={news} />
+        )}
+      {news && (
+        <NewsList articles={news.articles} />
       )}
 
     </div>
